@@ -1,0 +1,31 @@
+@use '../utils/' as *;
+
+/*----------------------------------------*/
+/*  2.7 Pagination
+/*----------------------------------------*/
+
+.tp-pagination {
+    & ul {
+        & li {
+            display: inline-block;
+            & a {
+                width: 50px;
+                height: 50px;
+                color: #5A5860;
+                font-size: 14px;
+                font-weight: 500;
+                display: block;
+                border-radius: 30px;
+                line-height: 50px;
+                text-align: center;
+                @include tp-transition();
+            }
+            &.current,&:hover {
+                & a {
+                    background-color: var(--tp-secondry-color);
+                    color: #fff;
+                }
+            }
+        }
+    }
+}

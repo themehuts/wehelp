@@ -1,0 +1,187 @@
+@use '../utils/' as *;
+
+/*----------------------------------------*/
+/*  1.3 Default Classes
+/*----------------------------------------*/
+
+
+.w-img {
+	& img {
+		width: 100%;
+	}
+}
+
+.m-img {
+	& img {
+		max-width: 100%;
+	}
+}
+
+img {
+	max-width: 100%;
+}
+
+.fix {
+    overflow: hidden;
+}
+
+.clear {
+    clear: both;
+}
+
+.z-index-1 {
+	z-index: 1;
+	position: relative;
+}
+
+.z-index-2 {
+	z-index: 2;
+	position: relative;
+}
+
+.z-index-3 {
+	z-index: 3;
+	position: relative;
+}
+
+.z-index-11 {
+	z-index: 11;
+	position: relative;
+}
+
+.overflow-y-visible {
+	overflow-x: hidden;
+	overflow-y: visible;
+}
+
+.overflow-x-visible {
+	overflow-x: visible;
+	overflow-y: hidden;
+}
+
+.p-relative {
+	position: relative;
+}
+
+.p-absolute {
+	position: absolute;
+}
+
+// BG Color 
+.white-bg {
+	background-color: var(--tp-white-color);
+}
+
+.bg-black {
+	background-color: var(--tp-black-color);
+}
+
+.bg-gray {
+	background-color: var(--tp-gray-color);
+}
+
+.bg-gray-2 {
+	background-color: var(--tp-gray-color-2);
+}
+
+.bg-theme {
+	background-color: var(--tp-theme-color);
+}
+
+.bg-theme-2 {
+	background-color: var(--tp-primary-color);
+}
+
+.bg-theme-3 {
+	background-color: var(--tp-primary-color-2);
+}
+
+// bg image cover css
+.bg-cover {
+	background-size: cover;
+}
+
+// Font Family 
+.tp-sub-font {
+	font-family: var(--tp-font-sub-heading);
+}
+
+.tp-body-font {
+	font-family: var(--tp-font-body);
+}
+
+.tp-sub-font-2,.tp-sf-2 {
+	font-family: var(--tp-font-sub-heading-2);
+}
+
+.tp-heading-font {
+	font-family: var(--tp-font-heading);
+}
+
+.tp-heading-font-2,.tp-hf-2 {
+	font-family: var(--tp-font-heading-2);
+}
+
+// Font Weight
+.fnw {
+	&-300 {
+		font-weight: 300;
+	}
+	&-400 {
+		font-weight: 400;
+	}
+	&-500 {
+		font-weight: 500;
+	}
+	&-600 {
+		font-weight: 600;
+	}
+	&-700 {
+		font-weight: 700;
+	}
+}
+
+// Radius
+.br {
+	&-12 {
+		border-radius: 12px;
+	}
+	&-16 {
+		border-radius: 16px;
+	}
+	&-20 {
+		border-radius: 20px;
+	}
+	&-30 {
+		border-radius: 30px;
+	}
+}
+
+// Line Height
+.lh {
+	&-24 {
+		line-height: 24px;
+	}
+	&-1-2 {
+		line-height: 1.2;
+	}
+}
+
+// Height
+.tp-h-630 {
+ min-height: 630px;
+}
+
+// Container
+.container {
+	&-1400 {
+		max-width: 1430px;
+		margin: 0 auto;
+		// padding: 0 15px;
+	}
+}
+
+// Letter Spacing
+.ls-0 {
+	letter-spacing: inherit;
+}

@@ -1,0 +1,113 @@
+@use '../utils/' as *;
+
+/*----------------------------------------*/
+/*  2.4 Skill
+/*----------------------------------------*/
+
+.tpprogress {
+    & label {
+        background: var(--tp-theme-color);
+        margin-bottom: 7px;
+        padding: 7px 6px;
+        font-size: 13px;
+        font-weight: 600;
+        color: var(--tp-heading-color);
+        border-radius: 6px;
+        line-height: 1;
+        position: relative;
+        transform: translateX(-65%);
+        &::before {
+            position: absolute;
+            content: "";
+            width: 0px;
+            height: 0px;
+            border-style: solid;
+            border-width: 5px 5px 0 5px;
+            border-color: var(--tp-theme-color) transparent transparent transparent;
+            transform: rotate(0deg);
+            bottom: -5px;
+            left: 0;
+            right: 0;
+            margin: auto;
+        }
+    }
+    & .progress, & .progress-stacked {
+        --bs-progress-height: 8px;
+        --bs-progress-bg: rgba(18, 16, 24, 0.10);
+        --bs-progress-bar-color: #fff;
+        --bs-progress-bar-bg: var(--tp-theme-color);
+        border-radius: 6px;
+    }
+    & .progress-bar {
+        border-radius: 6px;
+    }
+}
+
+.tp-help-progress .progress, .tp-help-progress .progress-stacked {
+	--bs-progress-height: 10px;
+    --bs-progress-bg: rgba(248, 243, 231, 0.10);
+}
+
+.tpprogress-2 {
+    & .progress {
+        --bs-progress-height: 6px;
+        --bs-progress-bg: #F1F1F1;
+        --bs-progress-bar-bg: var(--tp-primary-color);
+    }
+    & label {
+        background: none;
+        font-size: 16px;
+        font-weight: 600;
+        color: var(--tp-primary-color);
+        transform: inherit;
+        display: block;
+        padding: 0;
+        margin: 0;
+        margin-bottom: 11px;
+        text-align: right;
+        &::before {
+            display: none;
+        }
+    }
+}
+
+// circle progressbar
+.tpcharity__circle {
+    background-color: var(--tp-primary-color-2);
+    height: 90px;
+    width: 90px;
+    border-radius: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    bottom: -45px;
+    right: 35px;
+}
+
+.progress-circle {
+    width: 75px;
+    height: 75px;
+    border-radius: 50%;
+    background: conic-gradient(#fff 0% 75%, #377D71 75% 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 20px;
+    color: #fff;
+    font-weight: 700;
+}
+
+.progress-circle::before {
+    content: "";
+    position: absolute;
+    width: 71px;
+    height: 71px;
+    background: var(--tp-primary-color-2);
+    border-radius: 50%;
+}
+
+.progress-circle span {
+    position: absolute;
+    font-weight: bold;
+}

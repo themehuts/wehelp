@@ -1,0 +1,66 @@
+@use '../../utils/' as *;
+
+/*----------------------------------------*/
+/*  3.2.8 Brand
+/*----------------------------------------*/
+
+.tp-text-slider-rotate {
+    transform: rotate(1deg);
+}
+
+.tp-text-slide {
+    &-title {
+        margin-bottom: 0;
+        font-size: 65px;
+        font-weight: 300;
+        letter-spacing: -4px;
+        & img {
+            margin-right: 30px;
+        }
+    }
+}
+
+.tp-slide-transtion {
+    -webkit-transition-timing-function: linear;
+    transition-timing-function: linear;
+}
+
+.tp-text-slider-active {
+    & .swiper-slide {
+        width: auto;
+        display: inline-block;
+    }
+}
+
+.tp-brand {
+    background-color: #fff;
+    height: 120px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.tp-text-bg {
+    &-1 {
+        padding: 50px 0;
+    }
+    &-2 {
+        padding: 67px 0;
+    }
+}
+
+.tp-logo-brand {
+    text-align: center;
+}
+
+.tp-gallery {
+    & img {
+        border-radius: 24px;
+    }
+}
+
+.tp-logo-border {
+    border-top: 1px solid rgba(18, 16, 24, 0.10);
+    border-bottom: 1px solid rgba(18, 16, 24, 0.10);
+    padding: 40px 0;
+}

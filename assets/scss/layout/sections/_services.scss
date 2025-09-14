@@ -1,0 +1,169 @@
+@use '../../utils/' as *;
+
+/*----------------------------------------*/
+/*  3.2.4 Services
+/*----------------------------------------*/
+
+.tpservices {
+    border-radius: 16px 16px 0px 0px;
+    border-bottom: 4px solid #F55;
+    padding: 50px 15px 45px 15px;
+    @include tp-transition();
+    &-style {
+        &-2 {
+            & .tpservices__title {
+                &:hover {
+                    color: #36E0D1;
+                }
+            }
+            & .tp-btn-text {
+                &:hover {
+                    color: #36E0D1;
+                }
+            }
+        }
+        &-3 {
+            & .tpservices__title {
+                &:hover {
+                    color: #FFD94F;
+                }
+            }
+            & .tp-btn-text {
+                &:hover {
+                    color: #FFD94F;
+                }
+            }
+        }
+        &-4 {
+            & .tpservices__title {
+                &:hover {
+                    color: #B855FF;
+                }
+            }
+            & .tp-btn-text {
+                &:hover {
+                    color: #B855FF;
+                }
+            }
+        }
+    }
+    &-area-margin {
+        margin-top: -140px;
+    }
+    &__title {
+        font-size: 24px;
+        &:hover {
+            color: #F55;
+        }
+        &-2 {
+            font-size: 23px;
+            color: #0D594A;
+            margin-bottom: 10px;
+            letter-spacing: inherit;
+            &:hover {
+                color: var(--tp-secondry-color) !important;
+            }
+        }
+    }
+    &:hover {
+        transform: translateY(-10px);
+        box-shadow: 0px 20px 60px 0px rgba(41, 28, 3, 0.10);
+    }
+    &-2 {
+        padding: 50px 40px;
+        border-radius: 20px;
+        padding-bottom: 46px;
+        box-shadow: none;
+        background: #D5F4F0;
+        @media #{$xl} {
+            padding: 50px 30px;
+        }
+        & p {
+            font-size: 16px;
+            line-height: 24px;
+            margin-bottom: 0;
+        }
+        &:hover {
+            transform: translateY(-5px);
+            box-shadow: none;
+        }
+    }
+    &-3 {
+        & .tpservices__title-2 {
+            font-size: 23px;
+            letter-spacing: -0.52px;
+        }
+    }
+}
+
+.tp-bottom-quote {
+    & img {
+        margin-right: 14px;
+    }
+    & p {
+        margin: 0;
+        font-size: 24px;
+        font-family: var(--tp-font-heading);
+        color: var(--tp-primary-color);
+        letter-spacing: -0.96px;
+        & a {
+            font-weight: 600;
+            display: inline-flex;
+            flex-direction: column;
+            text-align: center;
+        }
+    }
+    &-2 {
+        & p {
+            font-family: var(--tp-font-heading-2);
+        }
+    }
+}
+
+.tpsv {
+    background: #EEFCEB;
+    padding: 40px;
+    border-radius: 20px;
+    @media #{$lg} {
+        padding: 25px;
+    }
+    &__content {
+        & p {
+            font-size: 16px;
+            line-height: 24px;
+            color: var(--tp-primary-color-2);
+            margin: 0;
+        }
+    }
+    &__title {
+        font-size: 24px;
+        font-weight: 700;
+        color: var(--tp-primary-color-2);
+        letter-spacing: -0.48px;
+        @media #{$lg} {
+            font-size: 22px;
+        }
+    }
+}
+
+.tp-volunteer-shape {
+    &-1 {
+        display: inline-block;
+        transform: translateX(100px);
+        & svg {
+            position: absolute;
+            top: -7px;
+            right: -12px;
+        }
+    }
+    &-2 {
+        display: inline-block;
+        margin-top: 150px;
+        transform: translateX(-55px);
+        & svg {
+            position: absolute;
+            top: -7px;
+            left: -12px;
+        }
+    }
+}

@@ -1,0 +1,343 @@
+@use '../../utils/' as *;
+
+/*----------------------------------------*/
+/*  3.1.1 Header
+/*----------------------------------------*/
+
+.tp-header {
+    &-transparent {
+        position: absolute;
+        top: 26px;
+        left: 0;
+        right: 0;
+    }
+    &-container {
+        max-width: 1424px;
+    }
+    &-bg {
+        padding-right: 5px;
+        border-radius: 12px;
+    }
+    &-logo {
+        z-index: 1;
+        position: relative;
+        &-box {
+            width: 200px;
+            flex: 0 0 auto;
+            border-radius: 12px 0 0 11px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            
+        }
+        &-shape {
+            position: relative;
+            & svg {
+                position: absolute;
+                top: 0;
+                left: 0;
+                height: 100%;
+            }
+        }
+        &-sep {
+            position: relative;
+            padding-left: 20px;
+            &::after {
+                content: "";
+                background: rgba(8, 55, 44, 0.20);
+                height: 30px;
+                width: 1px;
+                position: absolute;
+                right: -24px;
+                top: 50%;
+                transform: translateY(-50%);
+            }
+        }
+    }
+    &-menu {
+        & ul {
+            & li {
+                display: inline-block;
+                margin-right: 40px;
+                position: relative;
+                @media #{$xl} {
+                    margin-right: 28px;
+                }
+                @media #{$xxlm} {
+                    margin-right: 20px;
+                }
+                & a {
+                    display: inline-block;
+                    color: var(--tp-primary-color);
+                    font-size: 16px;
+                    font-weight: 600;
+                    padding: 21px 0;
+                }
+                &:hover {
+                    & > a {
+                        color: var(--tp-secondry-color);
+                    }
+                    & > .sub-menu {
+                        opacity: 1;
+                        visibility: visible;
+                        top: 100%;
+                    }
+                }
+                & .sub-menu {
+                    position: absolute;
+                    top: 105%;
+                    left: 0;
+                    background: #fff;
+                    width: 220px;
+                    padding: 18px 0;
+                    @include tp-transition();
+                    opacity: 0;
+                    visibility: hidden;
+                    z-index: 9;
+                    & li {
+                        display: block;
+                        margin-right: 0;
+                        & a {
+                            padding: 3px 28px;
+                            display: block;
+                        }
+                        & .sub-menu {
+                            left: 102%;
+                            top: 0;
+                        }
+                        &:hover {
+                            > .sub-menu {
+                                left: 100%;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    &-content {
+        width: 100%;
+        @media #{$lg} {
+            padding: 5px 0;
+            padding-right: 12px;
+        }
+        @media #{$md} {
+            padding: 5px 0;
+            padding-right: 12px;
+        }
+        @media #{$xs} {
+            padding: 16.1px 0;
+            padding-right: 17px;
+        }
+    }
+    &-phone {
+        & a {
+            color: var(--tp-primary-color);
+            font-size: 15px;
+            font-weight: 600;
+            &:hover {
+                color: var(--tp-secondry-color);
+            }
+            & svg {
+                margin-right: 10px;
+            }
+        }
+    }
+    &-toogle {
+        font-size: 34px;
+        color: var(--tp-primary-color);
+        border-radius: 4px;
+        &-2 {
+            background: #fff;
+            padding: 7px 14px;
+            font-size: 22px;
+            border-radius: 4px;
+        }
+    }
+}
+
+.tp-meta-dvir {
+    background: rgba(255, 255, 255, 0.20);
+    height: 20px;
+    width: 1px;
+    display: inline-block;
+    margin: 0 22px;
+}
+
+.tp-header-full {
+    &-area {
+        @media #{$lg,$md,$xs} {
+            padding: 10px 30px;
+        }
+    }
+    &-top {
+        @media #{$xl} {
+            padding-left: 50px;
+        }
+    }
+    &-meta {
+        display: flex;
+        align-items: center;
+        padding: 11px 0;
+        & span {
+            color: #fff;
+            font-size: 14px;
+            // & svg {
+            //     margin-right: 6px;
+            // }
+        }
+    }
+    &-row {
+        display: flex;
+        @media #{$lg,$md,$xs} {
+            justify-content: space-between;
+        }
+    }
+    &-logo {
+        // background-color: var(--tp-primary-color-2);
+        padding-left: 80px;
+        @media #{$xl} {
+            padding-left: 20px;
+        }
+        @media #{$lg,$md,$xs} {
+            padding: 0;
+        }
+        &-shape {
+            width: 0px;
+            height: 0px;
+            border-style: solid;
+            border-width: 120px 0 0 86px;
+            border-color: transparent transparent transparent var(--tp-primary-color-2);
+            transform: rotate(0deg);
+            position: absolute;
+            right: -86px;
+            top: 0;
+            @media #{$xl} {
+                border-width: 120px 0 0 35px;
+                right: -34px;
+            }
+        }
+    }
+    &-left {
+        width: 260px;
+        flex: 0 0 auto;
+        display: flex;
+        align-items: center;
+        @media #{$xl} {
+            width: 180px;
+        }
+    }
+    &-middle {
+        width: 100%;
+    }
+    &-right {
+        width: 260px;
+        flex: 0 0 auto;
+        @media #{$xl} {
+            width: 200px;
+        }
+    }
+}
+
+.tp-header-full-btn {
+    & a {
+        color: var(--tp-theme-color);
+        font-size: 18px;
+        font-weight: 600;
+        font-family: "Tillana", system-ui;
+        @media #{$xl} {
+            font-size: 15px;
+        }
+    }
+    & svg {
+        position: absolute;
+        top: -13px;
+        right: 0;
+        left: 0;
+        margin: auto;
+    }
+}
+
+.tp-header-lang {
+    & ul {
+        & li {
+            list-style: none;
+            position: relative;
+            line-height: 1;
+            & a {
+                color: #fff;
+                font-size: 14px;
+            }
+            & ul {
+                display: none;
+                position: absolute;
+                top: 173%;
+                left: 0;
+                background: #000;
+                width: 70px;
+                padding: 7px 15px;
+                z-index: 2;
+                & li {
+                    margin: 7px 0;
+                }
+            }
+        }
+    }
+}
+
+.tp-header-full-menu {
+    border-radius: 0 12px 12px 0;
+    @media #{$xl} {
+        padding-left: 50px;
+    }
+}
+
+.tp-header-full-logo-line {
+    position: absolute;
+    content: "";
+    background: var(--tp-theme-color);
+    width: 6px;
+    height: calc(100% + 27px);
+    top: -2px;
+    right: -5px;
+    z-index: 22222;
+    transform: rotate(-36deg);
+    transform-origin: top right;
+    @media #{$xl} {
+        height: calc(100% + 6px);
+        transform: rotate(-15deg);
+    }
+}
+
+.header-sticky {
+	position: fixed;
+	top: 10px;
+	left: 0;
+	right: 0;
+    z-index: 55;
+	-webkit-animation: 0.7s ease-in-out 0s normal none 1 running tpFadeInDown;
+	animation: 0.7s ease-in-out 0s normal none 1 running tpFadeInDown;
+    & .tp-header-bg {
+        box-shadow: 0px 20px 30px rgba(167, 167, 167, 0.1);
+    }
+    &.tp-header-full-area {
+        top: 0;
+        box-shadow: 0px 20px 30px rgba(167, 167, 167, 0.1);
+    }
+    & .tp-header-full-top {
+        display: none;
+    }
+    & .tp-header-full-logo-line {
+        height: calc(100% + 30px);
+        transform: rotate(-46deg);
+    }
+    & .tp-header-full-logo-shape {
+        border-width: 70px 0 0 75px;
+        right: -74px;
+    }
+    & .tp-header-full-menu {
+        @media #{$xl} {
+            padding-left: 80px;
+        }
+    }
+}

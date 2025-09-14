@@ -1,0 +1,205 @@
+@use '../../utils/' as *;
+
+/*----------------------------------------*/
+/*  3.2.5 About
+/*----------------------------------------*/
+
+.tp-about {
+    &-wrapper {
+        @media #{$xl} {
+            padding-left: 30px;
+        }
+        & .tp-section-info {
+            @media #{$lg,$md,$xs} {
+                padding-left: 0;
+            }
+        }
+    }
+    &-shape {
+        &-1 {
+            left: 97px;
+            top: 22%;
+            mix-blend-mode: exclusion;
+            @media #{$xxlm} {
+                left: 20px;
+            }
+        }
+        &-2 {
+            right: -230px;
+            top: -45px;
+            @media #{$xxlm} {
+                top: -60px;
+                right: -265px;
+            }
+            @media #{$xl} {
+                top: -60px;
+                right: -265px;
+            }
+        }
+    }
+    &-img {
+        & img {
+            @media #{$xs} {
+                width: 100%;
+            }
+        }
+    }
+    &-vr-title {
+        font-size: 130px;
+        font-weight: 600;
+        color: #E0DEDA;
+        margin: 0;
+        line-height: 1;
+        position: absolute;
+        right: -242px;
+        transform: rotate(90deg);
+        top: 120px;
+    }
+    &-number {
+        position: absolute;
+        bottom: 80px;
+        right: -120px;
+        @media #{$xs} {
+            bottom: 30px;
+            right: 10px;
+        }
+        @media #{$lg} {
+            right: 20px;
+        }
+        &-info {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            text-align: right;
+            left: 0;
+            right: 0;
+            padding-right: 62px;
+            padding-left: 40px;
+            & h2 {
+                color: #F8F3E7;
+                font-size: 82px;
+            }
+            & h6 {
+                font-size: 15px;
+                color: #F8F3E7;
+                letter-spacing: 0;
+                margin: 0;
+            }
+        }
+    }
+    &-fact {
+        &-shape {
+            top: -5px;
+            left: -45px;
+            max-width: inherit;
+            mix-blend-mode: multiply;
+        }
+        &-img {
+            margin-right: 12px;
+        }
+        &-box {
+            padding: 20px 16px 15px;
+            @media #{$xl} {
+                padding: 20px 10px 15px;
+            }
+            &-info {
+                & h4 {
+                    margin-bottom: 4px;
+                    font-weight: 400;
+                }
+                & p {
+                    font-size: 15px;
+                    margin: 0;
+                }
+            }
+        }
+    }
+}
+
+.tp-about-quote p {
+    font-size: 20px;
+    line-height: 26px;
+    color: var(--tp-primary-color);
+}
+
+.tp-about-quote-img {
+    flex: 0 0 auto;
+}
+
+.tp-about-shape-2-1 {
+    top: -22%;
+    right: 0;
+    @media #{$md,$xs} {
+        top: -8%;
+        z-index: -1;
+        max-width: 27%;
+    }
+}
+
+.tp-about-thumb {
+    @media #{$lg,$md,$xs} {
+        margin-left: 0;
+    }
+    & img {
+        @media #{$md,$xs} {
+            width: 100%;
+        }
+    }
+    &-shape-1 {
+        top: 50%;
+        transform: translateY(-42%);
+        left: -195px;
+        border-radius: 20px;
+        border: 6px solid #fff;
+        box-shadow: 20px 20px 40px 0px rgba(0, 0, 0, 0.14);
+        @media #{$xl} {
+            left: -160px;
+        }
+    }
+    &-shape-2 {
+        top: 60px;
+        left: -117px;
+        border-radius: 20px 20px 6px 20px;
+        @media #{$xl} {
+            top: 13px;
+        }
+    }
+    &-shape-3 {
+        bottom: 45px;
+        left: -124px;
+        @media #{$xl} {
+            bottom: 20px;
+        }
+    }
+}
+
+.tp-about-3 {
+    padding-left: 80px;
+    padding-right: 80px;
+    @media #{$xl} {
+        padding-left: 30px;
+        padding-right: 20px;
+    }
+    @media #{$lg,$md,$xs} {
+        padding-left: 0;
+        padding-right: 0;
+    }
+}
+
+.tp-about-list {
+    display: flex;
+    &-icon {
+        flex: 0 0 auto;
+        margin-right: 22px;
+    }
+    &-title {
+        font-size: 24px;
+        letter-spacing: -0.48px;
+    }
+    &-text {
+        & p {
+            font-size: 16px;
+            line-height: 27px;
+        }
+    }
+}

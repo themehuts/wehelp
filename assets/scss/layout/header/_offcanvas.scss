@@ -1,0 +1,93 @@
+@use '../../utils/' as *;
+
+/*----------------------------------------*/
+/*  3.1.2 Offcanvas
+/*----------------------------------------*/
+
+.tp-offcanvas {
+    position: fixed;
+    right: 0;
+    top: 0;
+    z-index: 99;
+    width: 400px;
+    background: #fff;
+    padding: 50px 40px;
+    height: 100%;
+    overflow-y: scroll;
+    @include translateX(100%);
+    @include tp-transition(.4s);
+    @media #{$xs} {
+        width: 100%;
+        // position: absolute;
+    }
+    @media #{$sm} {
+        width: 400px;
+    }
+    &-open {
+        @include translateX(0);
+    }
+    &-overlay {
+        position: fixed;
+        height: 100%;
+        width: 100%;
+        background: #000;
+        z-index: 15;
+        opacity: 0;
+        transition: .3s;
+        visibility: hidden;
+        &-open {
+            opacity: .4;
+            visibility: visible;
+        }
+        // position: fixed;
+        // height: 100%;
+        // width: 0%;
+        // background: #000;
+        // z-index: 15;
+        // opacity: 0;
+        // transition: .3s;
+        // visibility: hidden;
+        // top: 0;
+        // right: 0;
+        // &-open {
+        //     opacity: .4;
+        //     visibility: visible;
+        //     width: 100%;
+        // }
+    }
+    &-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    &-close {
+        &-button {
+            font-size: 28px;
+            color: var(--tp-heading-color);
+        }
+    }
+    &-gallery {
+        display: grid;
+        grid-gap: 10px;
+        grid-template-columns: auto auto auto auto;
+    }
+    &-info {
+        & span {
+            display: block;
+            margin-bottom: 5px;
+        }
+    }
+    &-social {
+        & a {
+            height: 44px;
+            width: 44px;
+            background-color: var(--tp-primary-color);
+            border-radius: 12px;
+            display: inline-block;
+            text-align: center;
+            line-height: 42px;
+            margin-right: 2px;
+            color: #fff;
+        }
+    }
+}

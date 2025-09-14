@@ -1,0 +1,97 @@
+@use '../utils/' as *;
+
+/*----------------------------------------*/
+/*  2.2 Section Title
+/*----------------------------------------*/
+
+.tp-section {
+    &-info {
+        & p {
+            & br {
+                @media #{$lg,$md,$xs} {
+                    display: none;
+                }
+            }
+        }
+        &-team {
+            @media #{$lg,$md,$xs} {
+                margin-bottom: 30px;
+            }
+        }
+        &-space {
+            margin-left: 78px;
+            @media #{$xl} {
+                margin-left: 30px;
+            }
+            @media #{$lg,$md,$xs} {
+                margin-left: 0;
+            }
+        }
+    }
+    &-sub-title {
+        font-size: 30px;
+        color: var( --tp-pink-color);
+        & samp {
+            height: 1px;
+            width: 60px;
+            display: inline-block;
+            background: var(--tp-secondry-color);
+            transform: translateY(-5px);
+        }
+    }
+    &-title {
+        font-size: 57px;
+        @media #{$md} {
+            font-size: 42px;
+            letter-spacing: -.3px;
+        }
+        @media #{$xs} {
+            font-size: 36px;
+            letter-spacing: -.3px;
+        }
+        @media #{$lg} {
+            font-size: 45px;
+        }
+        & br {
+            @media #{$xs} {
+                display: none;
+            }
+        }
+        &-sm {
+            font-weight: 400;
+            font-size: 40px;
+            line-height: 1.15;
+            & br {
+                @media #{$xs,$md} {
+                    display: none;
+                }
+            }
+        }
+        & span {
+            text-decoration-line: underline;
+            text-decoration-style: wavy;
+            text-decoration-skip-ink: auto;
+            text-decoration-thickness: 2px;
+            text-underline-offset: auto;
+            text-underline-position: from-font;
+        }
+    }
+    &-back-title {
+        font-size: 280px;
+        font-weight: 600;
+        letter-spacing: -11.2px;
+        background: linear-gradient(179deg, #E0DEDA 39.13%, #F2F0EC 104.12%);
+        background-clip: text;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        margin: 0;
+        bottom: 50px;
+        z-index: 1;
+        @media #{$xs} {
+            font-size: 200px;
+        }
+        &-2 {
+            bottom: -50px;
+        }
+    }
+}

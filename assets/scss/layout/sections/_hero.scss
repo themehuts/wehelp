@@ -1,0 +1,211 @@
+@use '../../utils/' as *;
+
+/*----------------------------------------*/
+/*  3.2.2 Hero
+/*----------------------------------------*/
+
+.tp-hero {
+    position: relative;
+    z-index: 2;
+    @media #{$xs} {
+        // padding-top: 130px;
+        padding-top: 0;
+    }
+    &-height {
+        height: 950px;
+        @media #{$xs} {
+            height: 650px;
+        }
+    }
+    &-area {
+        padding-top: 285px;
+        padding-bottom: 325px;
+        @media #{$md} {
+            padding-top: 220px;
+            padding-bottom: 270px;
+        }
+        @media #{$xs} {
+            padding-top: 215px;
+            padding-bottom: 255px;
+        }
+        &-2 {
+            padding-top: 240px;
+            padding-bottom: 230px;
+        }
+    }
+    & span {
+        font-size: 50px;
+        color: var( --tp-theme-color);
+        line-height: 1;
+        @media #{$xs} {
+            font-size: 26px;
+        }
+    }
+    &-title {
+        font-size: 100px;
+        letter-spacing: -2px;
+        @media #{$lg,$md} {
+            font-size: 92px;
+        }
+        @media #{$xs} {
+            font-size: 56px;
+            letter-spacing: -2px;
+        }
+        &-2 {
+            font-size: 78px;
+            @media #{$xs} {
+                font-size: 45px;
+                letter-spacing: -0.4px;
+                margin-bottom: 20px;
+            }
+        }
+    }
+    & p {
+        color: #F8F3E7;
+        font-size: 21px;
+        @media #{$xs} {
+            font-size: 20px;
+        }
+    }
+    &-btn {
+        // margin-top: 35px;
+        @media #{$xs} {
+            margin-top: 35px;
+        }
+        &-2 {
+            & .tp-btn {
+                &:hover {
+                    background-color: var(--tp-secondry-color);
+                }
+            }
+        }
+    }
+    &-video {
+        & a {
+            border-radius: 100px;
+            border: 2px solid #fff;
+            background: rgba(255, 255, 255, 0.06);
+            box-shadow: 0px 0px 30px 0px rgba(17, 17, 45, 0.10);
+            backdrop-filter: blur(5px);
+            width: 90px;
+            height: 90px;
+            display: inline-block;
+            line-height: 102px;
+            text-align: center;
+            color: #fff;
+            &:hover {
+                background-color: #fff;
+                color: var(--tp-primary-color);
+            }
+        }
+    }
+    &-shape {
+        &-1 {
+            top: 33%;
+            left: 7.5%;
+            @media #{$xxlm} {
+                top: 14%;
+                left: 1.5%;
+            }
+            @media #{$xl,$lg,$md,$xs} {
+                top: 14%;
+                left: auto;
+                right: 10%;
+            }
+        }
+        &-2 {
+            bottom: 15%;
+            left: 6%;
+        }
+        &-down {
+            bottom: -3px;
+            & img {
+                @media #{$md,$xs} {
+                    height: 39px;
+                }
+            }
+            &-2 {
+                bottom: 0;
+                left: 0;
+                & img {
+                    height: 40px;
+                }
+                // @media #{$lg} {
+                //     bottom: -3px;
+                // }
+                // @media #{$md} {
+                //     bottom: -5px;
+                // }
+            }
+        }
+    }
+}
+
+.tp-hero-2 {
+    &-shape-1 {
+        top: -74px;
+        left: -69px;
+    }
+    &-shape-2 {
+        left: 40%;
+        bottom: 15%;
+    }
+}
+
+.tp-hero-mask {
+    height: 100%;
+    width: 100%;
+    -webkit-mask-image: url(../img/mask/hero-mask.png);
+    mask-image: url(../img/mask/hero-mask.png);
+    mask-repeat: no-repeat;
+    @media #{$md,$xs} {
+        -webkit-mask-image: inherit;
+        mask-image: inherit;
+        mask-repeat: inherit;
+        position: relative;
+        &::before {
+            content: "";
+            position: absolute;
+            background: var(--tp-primary-color);
+            height: 100%;
+            width: 100%;
+            left: 0;
+            top: 0;
+            opacity: .6;
+        }
+    }
+    &-wrap {
+        position: absolute;
+        right: 0;
+        top: 0;
+        height: 100%;
+        // width: 920px;
+        width: 910px;
+        @media #{$xxlml} {
+            width: 720px;
+        }
+        @media #{$xl} {
+            // width: 620px;
+            width: 600px;
+        }
+        @media #{$lg} {
+            width: 420px;
+        }
+        @media #{$md} {
+            width: 100%;
+        }
+    }
+    &-line {
+        position: absolute;
+        left: -15px;
+        bottom: 0;
+        transform: rotate(8.4deg);
+        transform-origin: left bottom;
+        height: calc(100% + 11px);
+    }
+}
+
+.tp-hero-mask img {
+    height: 100%;
+    object-fit: cover;
+}

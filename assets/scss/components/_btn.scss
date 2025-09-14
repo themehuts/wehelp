@@ -1,0 +1,166 @@
+@use '../utils/' as *;
+
+/*----------------------------------------*/
+/*  2.1 Theme Btn
+/*----------------------------------------*/
+
+.tp-btn {
+    background: var(--tp-theme-color);
+    padding: 22px 34px;
+    font-size: 16px;
+    font-weight: 600;
+    display: inline-block;
+    line-height: 1;
+    border-radius: 12px;
+    color: var(--tp-primary-color);
+    &:hover {
+        background-color: var(--tp-primary-color);
+        color: #fff;
+    }
+    &-primary {
+        background-color: var(--tp-primary-color);
+        color: var(--tp-gray-color-2);
+        &:hover {
+            background-color: var(--tp-secondry-color);
+            color: #fff;
+        }
+    }
+    &-white {
+        background-color: var(--tp-white-color);
+    }
+    &-text {
+        font-size: 15px;
+        &:hover {
+            color: #F55;
+        }
+    }
+    &-border {
+        background: #FFF;
+        box-shadow: 0px 36px 16px -24px rgba(18, 16, 24, 0.08);
+        border: 1px solid #073D30;
+        border-radius: 12px;
+        padding: 11px 27px;
+        color: #073D30;
+        text-align: center;
+        font-size: 16px;
+        font-weight: 600;
+        line-height: 1;
+        display: inline-block;
+        &:hover {
+            background-color: var(--tp-primary-color);
+            color: #fff;
+            border-color: var(--tp-primary-color);
+        }
+    }
+    &-border-down {
+        color: var(--tp-heading-color);
+        font-family: var(--tp-font-heading);
+        font-size: 24px;
+        font-weight: 600;
+        display: inline-block;
+        border-bottom: 1px solid var(--tp-heading-color);
+        // text-decoration-line: underline;
+        &:hover {
+            color: var(--tp-secondry-color) !important;
+            border-color: var(--tp-secondry-color);
+        }
+        &.border-0 {
+            &:hover {
+                text-decoration: underline;
+            }
+        }
+    }
+    &-sm {
+        border-radius: 8px;
+        background: var(--tp-primary-color);
+        padding: 12px 17px;
+        font-size: 16px;
+        font-weight: 600;
+        color: #F8F3E7;
+        line-height: 1;
+        display: inline-block;
+        &:hover {
+            background: var(--tp-theme-color);
+            color: var(--tp-primary-color);
+        }
+        &-theme {
+            background: var(--tp-theme-color);
+            color: var(--tp-primary-color);
+            &:hover {
+                background: var(--tp-secondry-color);
+                color: #fff;
+            }
+        }
+    }
+    &-full {
+        background-color: var(--tp-gray-color-2);
+        font-size: 16px;
+        font-weight: 600;
+        color: var(--tp-primary-color);
+        display: block;
+        text-align: center;
+        padding: 17px 20px;
+        line-height: 1;
+        border-radius: 12px;
+        &:hover {
+            background-color: var(--tp-primary-color);
+            color: #fff;
+        }
+        &-red {
+            background: var(--tp-secondry-color);
+            color: #fff;
+        }
+    }
+    &-red {
+        background: var(--tp-secondry-color);
+        padding: 14px 26px;
+        font-size: 14px;
+        font-weight: 600;
+        display: inline-block;
+        line-height: 1;
+        border-radius: 30px;
+        color: #fff;
+        text-transform: uppercase;
+        &:hover {
+            background-color: var(--tp-theme-color);
+            color: #222;
+        }
+        &-xl {
+            background: var(--tp-secondry-color);
+            padding: 22px 43px;
+            text-transform: uppercase;
+            color: #fff;
+            &:hover {
+                background-color: var(--tp-theme-color);
+                color: #222;
+            }
+        }
+        &-sm {
+            padding: 19px 43px;
+        }
+        &-yellow {
+            padding: 17px 26px;
+            background-color: var(--tp-theme-color);
+            color: var(--tp-heading-color);
+            &:hover {
+                background-color: var(--tp-secondry-color);
+                color: #fff;
+            }
+        }
+    }
+}
+
+.tp-text-btn {
+    &-icon {
+        font-size: 16px;
+        font-weight: 600;
+        color: var(--tp-heading-color);
+        &:hover {
+            text-decoration: underline;
+            color: var(--tp-heading-color);
+        }
+        & svg {
+            margin-left: 5px;
+        }
+    }
+}

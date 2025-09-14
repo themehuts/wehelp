@@ -1,0 +1,273 @@
+@use '../utils/' as *;
+
+/*-----------------------------------------------------------------------------------
+
+    Template Name: Wehelp - Charity And Fundraising HTML Template
+    Author: HixStudio
+    Support: help.aqlova.com
+    Description: Wehelp is a modern & professional Non Profit Charity HTML Template. Which fits for all kind of charity, fundraising, nonprofit, NGO, donations, church, Mosque and all other non-profit charity website, businesses and NGO.
+    Version: 1.0.0
+
+-----------------------------------------------------------------------------------
+
+/************ TABLE OF CONTENTS ***************
+
+	-----------------
+    01. THEME CSS
+	-----------------
+		1.1 Theme Default
+		1.2 Default Spacing
+		1.3 Default Classes
+		
+	-----------------
+    02. COMPONENTS CSS
+	-----------------
+		2.1 Theme Btn
+		2.2 Section Title
+		2.3 Faq
+		2.4 Skill
+		2.5 Tabs
+		2.6 Breadcrumb
+		2.7 Pagination
+		2.8 Custom Animation
+		2.9 Preloader
+
+	-----------------
+    03. LAYOUT CSS
+	-----------------
+		3.1 Header
+			3.1.1 Header
+			3.1.2 Offcanvas
+			3.1.3 Sidemenu
+
+		3.2 Sections
+			3.2.1 Slider
+			3.2.2 Hero
+			3.2.3 Features
+			3.2.4 Services
+			3.2.5 About
+			3.2.6 TPcauses
+			3.2.7 Volunteers
+			3.2.8 Brand
+			3.2.9 Fact
+			3.2.10 Cta
+			3.2.11 Events
+			3.2.12 Team
+			3.2.13 Contact Form
+			3.2.14 Step
+			3.2.15 Join
+			3.2.16 Testimonial
+			3.2.17 Pricing
+			3.2.18 Font Size
+
+		3.3 Blog
+			3.3.1 Blog
+
+		3.4 Footer
+			3.4.1 Footer
+
+**********************************************/
+
+
+/*----------------------------------------*/
+/*  1.1 Theme Default
+/*----------------------------------------*/
+
+@import url($font-url);
+
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+/*---------------------------------
+	typography css start 
+---------------------------------*/
+body {
+	font-family: var(--tp-font-body);
+	font-size: 18px;
+	font-weight: normal;
+	color: var(--tp-body-color);
+	line-height: 28px;
+}
+
+a {
+	text-decoration: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	font-family: var(--tp-font-heading);
+	color: var(--tp-heading-color);
+	margin-top: 0px;
+	font-weight: 700;
+	line-height: 1.18;
+	letter-spacing: -2px;
+	@media #{$xs} {
+		letter-spacing: -1px;
+	}
+}
+
+h1 {
+	font-size: 48px;
+}
+  
+h2 {
+font-size: 38px;
+}
+
+h3 {
+font-size: 28px;
+}
+
+h4 {
+font-size: 24px;
+}
+
+h5 {
+font-size: 18px;
+}
+
+h6 {
+font-size: 16px;
+}
+
+ul {
+	margin: 0px;
+	padding: 0px;
+}
+
+p {
+	font-family: var(--tp-font-body);
+	font-size: 18px;
+	font-weight: 400;
+	color: var(--tp-body-color);
+	margin-bottom: 15px;
+	line-height: 28px;
+}
+
+img {
+	height: auto;
+}
+
+a,
+button,
+p,
+input,
+select,
+textarea,
+li,
+.transition-3 {
+	@include tp-transition(.3s);
+
+}
+
+a:not([href]):not([class]), 
+a:not([href]):not([class]):hover {
+	color: inherit;
+	text-decoration: none;
+}
+
+a:focus,
+.button:focus {
+	text-decoration: none;
+	outline: none;
+}
+
+a:focus,
+a:hover{
+	color: inherit;
+	text-decoration: none;
+}
+
+a,
+button {
+	color: inherit;
+	outline: none;
+	border: none;
+	background: transparent;
+}
+
+button:hover {
+	cursor: pointer;
+}
+
+button:focus {
+    outline: 0; 
+}
+
+.uppercase {
+	text-transform: uppercase;
+}
+.capitalize {
+	text-transform: capitalize;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+input[type="number"],
+input[type="password"],
+input[type="url"],
+textarea {
+	outline: none;
+	background-color: transparent;
+	height: 54px;
+	width: 100%;
+	line-height: 56px;
+	font-size: 16px;
+	color: var(--tp-heading-color);
+	border: 0;
+	font-weight: 400;
+	border-radius: 12px;
+	background: #F6F6F6;
+	padding: 0 20px;
+	border: 1px solid transparent;
+	@include tp-transition();
+	@include tp-placeholder {
+		color: #85838B;
+	}
+
+	&:focus {
+		border-color: var(--tp-secondry-color);
+		box-shadow: 0px 0px 0px 4px rgba(254, 78, 21, 0.10);
+		background: #FFF;
+	}
+
+}
+
+textarea {
+	height: 160px;
+	margin-bottom: 30px;
+}
+
+*::-moz-selection {
+	background: #333;
+	color: #fff;
+	text-shadow: none;
+}
+
+*::selection {
+	background: #333;
+	color: #fff;
+	text-shadow: none;
+}
+
+*::-moz-placeholder {
+	color: rgba(7, 61, 48, 0.70);
+	font-size: 16px;
+	opacity: 1;
+	font-weight: 400;
+}
+
+*::placeholder {
+	color: rgba(7, 61, 48, 0.70);
+	font-size: 16px;
+	opacity: 1;
+	font-weight: 400;
+}

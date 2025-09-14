@@ -1,0 +1,90 @@
+@use '../utils/' as *;
+
+/*----------------------------------------*/
+/*  2.8 Custom Animation
+/*----------------------------------------*/
+
+// Fade In Up
+.tpFadeInUp {
+    animation: tpFadeInUp 2s ease-out forwards;
+    opacity: 0;
+}
+
+@keyframes tpFadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+// Fade In Down
+.tpFadeInDown {
+    animation: tpFadeInDown 2s ease-out forwards;
+    opacity: 0;
+}
+
+@keyframes tpFadeInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-100px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+// Fade In Left
+.tpFadeInLeft {
+    animation: tpFadeInLeft 2s ease-out forwards;
+    opacity: 0;
+}
+
+@keyframes tpFadeInLeft {
+    from {
+        opacity: 0;
+        transform: translateX(-30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+// Fade In Right
+.tpFadeInRight {
+    animation: tpFadeInRight 2s ease-out forwards;
+    opacity: 0;
+}
+
+@keyframes tpFadeInRight {
+    from {
+        opacity: 0;
+        transform: translateX(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+// Zoom In
+.tpZoomIn {
+    animation: tpZoomIn 2s ease-out forwards;
+    opacity: 0;
+}
+
+@keyframes tpZoomIn {
+    from {
+        opacity: 0;
+        transform: scale(.7);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}

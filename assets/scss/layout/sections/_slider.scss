@@ -1,0 +1,117 @@
+@use '../../utils/' as *;
+
+/*----------------------------------------*/
+/*  3.2.1 Slider
+/*----------------------------------------*/
+
+.tp-slider {
+    &-item {
+        height: 810px;
+        position: relative;
+        @media #{$xl} {
+            height: 700px;
+        }
+        @media #{$lg,$md} {
+            height: 600px;
+        }
+        @media #{$xs} {
+            height: 500px;
+        }
+        &::before {
+            position: absolute;
+            content: "";
+            background: #000;
+            height: 100%;
+            width: 100%;
+            opacity: .4;
+        }
+    }
+    &-title {
+        font-size: 100px;
+        color: #fff;
+        line-height: 1.2;
+        @media #{$xl,$lg} {
+            font-size: 75px;
+        }
+        @media #{$md} {
+            font-size: 55px;
+        }
+        @media #{$xs} {
+            font-size: 35px;
+        }
+    }
+    &-subtitle {
+        font-size: 24px;
+        color: var(--tp-theme-color);
+        font-weight: 600;
+        margin-bottom: 25px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        @media #{$xs} {
+            font-size: 15px;
+        }
+        & i {
+            display: inline-block;
+            height: 1px;
+            width: 70px;
+            background: var(--tp-theme-color);
+            margin: 0 18px;
+            @media #{$xs} {
+                width: 30px;
+                margin: 0 15px;
+            }
+        }
+    }
+    &-arrow {
+        position: absolute;
+        top: 50%;
+        left: 64px;
+        height: 54px;
+        width: 54px;
+        color: #fff;
+        z-index: 99;
+        border: 1px solid rgba(255,255,255,.1);
+        border-radius: 30px;
+        font-size: 16px;
+        &:hover {
+            background-color: var(--tp-secondry-color);
+        }
+        &-next {
+            left: auto;
+            right: 64px;
+        }
+    }
+}
+
+// Animation Effect
+.tp-slider-subtitle {
+    transform: translateY(30px);
+    opacity: 0;
+    @include tp-transition(.6s);
+}
+.tp-slider-title {
+    transform: translateY(30px);
+    opacity: 0;
+    @include tp-transition(.6s);
+}
+.tp-slider-btn {
+    transform: translateY(30px);
+    opacity: 0;
+    @include tp-transition(.6s);
+}
+
+.swiper-slide-active .tp-slider-subtitle {
+    transition-delay: .6s;
+}
+.swiper-slide-active .tp-slider-title {
+    transition-delay: .9s;
+}
+.swiper-slide-active .tp-slider-btn {
+    transition-delay: 1.2s;
+}
+
+.swiper-slide-active .tp-slider-subtitle, .swiper-slide-active .tp-slider-title, .swiper-slide-active .tp-slider-btn {
+    opacity: 1;
+    transform: translateY(0);
+}

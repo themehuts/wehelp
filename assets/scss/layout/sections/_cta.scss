@@ -1,0 +1,124 @@
+@use '../../utils/' as *;
+
+/*----------------------------------------*/
+/*  3.2.10 Cta
+/*----------------------------------------*/
+
+.tp-cta {
+    @media #{$lg} {
+        min-height: 530px;
+    }
+    &-area {
+        @media #{$xs} {
+            padding-left: 15px;
+            padding-right: 15px;
+        }
+    }
+    &-img {
+        right: 43px;
+        bottom: 0;
+        @media #{$lg} {
+            text-align: center;
+        }
+        & img {
+            @media #{$lg} {
+                max-width: 60%;
+            }
+            @media #{$sm} {
+                max-width: 85%;
+            }
+        }
+        &-2 {
+            right: 0;
+            left: 0;
+            & img {
+                mix-blend-mode: luminosity;
+            }
+        }
+    }
+}
+
+.tp-help {
+    &-top {
+        @media #{$xxlm} {
+            padding: 25px 23px;
+        }
+        @media #{$xxll} {
+            padding: 25px 23px;
+        }
+        @media #{$xs} {
+            padding: 25px 23px;
+        }
+        & P {
+            & br {
+                @media #{$xxlm} {
+                    display: none;
+                }
+            }
+        }
+    }
+    &-list {
+        @media #{$xxlm,$xs} {
+            padding-right: 0;
+        }
+        @media #{$xxll} {
+            padding-right: 65px;
+        }
+        &-item {
+            display: flex;
+            margin-bottom: 14px;
+            align-items: center;
+        }
+        & span {
+            width: 26px;
+            height: 26px;
+            border-radius: 20px;
+            background: rgba(248, 243, 231, 0.10);
+            display: inline-block;
+            color: #F8F3E7;
+            text-align: center;
+            font-size: 12px;
+            margin-right: 10px;
+        }
+        & p {
+            font-size: 16px;
+            color: #F8F3E7;
+            margin: 0;
+            font-weight: 500;
+        }
+    }
+    &-amount {
+        & h4 {
+            color: #F8F3E7;
+            font-size: 20px;
+            letter-spacing: -0.8px;
+            margin-bottom: 0;
+        }
+    }
+    &-btn {
+        font-size: 18px;
+        padding: 20px 34px;
+        border-radius: 0px 0px 12px 0px;
+        &:hover {
+            background-color: #fff;
+            color: var(--tp-primary-color);
+        }
+        & svg {
+            margin-right: 5px;
+        }
+    }
+}
+
+.tp-br-top-bottom-left {
+    border-radius: 20px 0 0 20px;
+    @media #{$xs,$md,$lg,$xl} {
+        border-radius: 0;
+    }
+}
+
+.tp-br-right-bottom-right {
+    border-radius: 0 20px 20px 0;
+    @media #{$xs,$md,$lg,$xl} {
+        border-radius: 0;
+    }
+}

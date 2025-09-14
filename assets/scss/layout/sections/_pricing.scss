@@ -1,0 +1,110 @@
+@use '../../utils/' as *;
+
+/*----------------------------------------*/
+/*  3.2.17 Pricing
+/*----------------------------------------*/
+
+.tp-pricing {
+    border-radius: 20px;
+    border: 1px solid rgba(18, 16, 24, 0.10);
+    padding: 40px 36px;
+    padding-bottom: 30px;
+    position: relative;
+    &-title {
+        color: #FE4E15;
+        font-size: 16px;
+        font-weight: 500;
+        font-style: italic;
+    }
+    & p {
+        font-size: 16px;
+    }
+    &-price {
+        & h2 {
+            font-size: 40px;
+            display: inline-block;
+            color: #121018;
+        }
+        & span {
+            font-size: 16px;
+            color: #121018;
+        }
+    }
+    &-list {
+        & ul {
+            & li {
+                font-size: 16px;
+                margin-bottom: 10px;
+                display: flex;
+                align-items: center;
+                &.tp-disable {
+                    & i {
+                        background: #F5F1EE;
+                        color: #454449;
+                    }
+                }
+                & i {
+                    background: #065C4D;
+                    color: #fff;
+                    height: 20px;
+                    width: 20px;
+                    border-radius: 30px;
+                    text-align: center;
+                    font-size: 10px;
+                    line-height: 20px;
+                    margin-right: 6px;
+                }
+            }
+        }
+    }
+    &-badge {
+        border-radius: 30px;
+        background: rgba(215, 183, 160, 0.20);
+        display: inline-block;
+        padding: 7px 15px;
+        font-size: 13px;
+        color: #055C4D;
+        text-transform: uppercase;
+        font-family: var(--tp-font-sub-heading-2);
+        font-weight: 700;
+        line-height: 1;
+        position: absolute;
+        top: 10px;
+        right: 35px;
+        transform-origin: top right;
+        transform: rotate(-90deg);
+    }
+    &-nav-tabs {
+        display: inline-block;
+        border-radius: 30px;
+        border: 1px solid rgba(18, 16, 24, 0.10);
+        padding: 4px;
+        & button {
+            display: inline-block;
+            color: #121018;
+            text-align: center;
+            font-size: 16px;
+            font-weight: 600;
+            letter-spacing: -0.16px;
+            padding: 7px 23px;
+            border-radius: 30px;
+            &.active {
+                background-color: #FE4E15;
+                color: #fff;
+            }
+        }
+    }
+    &-discount {
+        display: inline-block;
+        & span {
+            font-size: 16px;
+            font-weight: 500;
+            color: #FE4E15;
+        }
+        & img {
+            position: absolute;
+            left: -80px;
+            top: -23px;
+        }
+    }
+}

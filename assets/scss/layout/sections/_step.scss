@@ -1,0 +1,80 @@
+@use '../../utils/' as *;
+
+/*----------------------------------------*/
+/*  3.2.14 Step
+/*----------------------------------------*/
+
+.tp-step {
+    position: relative;
+    &-col {
+        @media #{$md} {
+            width: 50%;
+        }
+        @media #{$sm} {
+            width: 50%;
+        }
+        @media #{$xs} {
+            width: 100%;
+        }
+    }
+    &-number {
+        font-size: 26px;
+        color: var(--tp-primary-color);
+        background: var(--tp-white-color);
+        height: 80px;
+        width: 80px;
+        text-align: center;
+        line-height: 81px;
+        border-radius: 100%;
+        display: inline-block;
+    }
+    &-title {
+        color: var(--tp-gray-color-2);
+        font-size: 26px;
+        margin-bottom: 10px;
+        letter-spacing: inherit;
+        @media #{$lg} {
+            font-size: 22px;
+        }
+    }
+    &-content {
+        & p {
+            font-size: 16px;
+            font-weight: 500;
+            color: rgba(248, 243, 231, 0.60);
+            line-height: 24px;
+        }
+    }
+    &-arrow {
+        position: absolute;
+        right: -70px;
+        top: 25px;
+        @media #{$lg} {
+            right: -40px;
+        }
+    }
+    &-down-text {
+        display: inline-block;
+        border-radius: 20px;
+        border: 1px solid rgba(248, 243, 231, 0.10);
+        padding: 6px 20px;
+    }
+    &-shape-top {
+        top: -40px;
+        left: 0;
+        height: 53px;
+    }
+    &-shape-down {
+        bottom: -40px;
+        left: 0;
+        height: 45px;
+    }
+    &-shape-1 {
+        top: 16%;
+        left: 20%;
+    }
+    &-shape-2 {
+        top: 23%;
+        right: 19%;
+    }
+}

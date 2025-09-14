@@ -1,0 +1,76 @@
+@use '../../utils/' as *;
+
+/*----------------------------------------*/
+/*  3.2.16 Testimonial
+/*----------------------------------------*/
+
+.tptestimonial {
+    & p {
+        font-size: 24px;
+        color: var(--tp-heading-color);
+        line-height: 1.4;
+        padding: 0 42px;
+        @media #{$xs} {
+            font-size: 17px;
+        }
+    }
+    &__label {
+        font-size: 30px;
+        font-weight: 700;
+        letter-spacing: 0.3px;
+    }
+    &__star {
+        color: #FFA72C;
+        font-size: 13px;
+    }
+    &__name {
+        font-size: 16px;
+        font-family: var(--tp-font-body);
+        letter-spacing: inherit;
+        margin: 0;
+    }
+    &__user {
+        display: flex;
+        justify-content: center;
+        text-align: left;
+        align-items: center;
+    }
+    &__img {
+        margin-right: 12px;
+        & img {
+            width: 50px;
+            height: 50px;
+            border-radius: 100%;
+        }
+    }
+    &__bio {
+        & span {
+            color: #6E6B76;
+            font-size: 14px;
+        }
+    }
+}
+
+.tp-testimonial-arrow {
+    height: 50px;
+    width: 50px;
+    color: #121018;
+    border: 1px solid rgba(18, 16, 24, 0.10);
+    border-radius: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 15px;
+    z-index: 9;
+    &:hover {
+        background-color: var(--tp-secondry-color);
+        color: #fff;
+    }
+    &-next {
+        left: auto;
+        right: 15px;
+    }
+}

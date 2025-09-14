@@ -1,0 +1,67 @@
+@use '../../utils/' as *;
+
+/*----------------------------------------*/
+/*  3.2.18 Font Size
+/*----------------------------------------*/
+
+// Font Size
+.fns {
+	&-14 {
+		font-size: 14px;
+	}
+	&-16 {
+		font-size: 16px;
+		line-height: 24px;
+	}
+	&-18 {
+		font-size: 18px;
+		line-height: 24px;
+	}
+	&-20 {
+		font-size: 20px;
+		line-height: 32px;
+	}
+	&-24 {
+		font-size: 24px;
+	}
+	&-26 {
+		font-size: 26px;
+	}
+	&-28 {
+		font-size: 28px;
+	}
+	&-34 {
+		font-size: 34px;
+	}
+	&-36 {
+		font-size: 36px;
+	}
+	&-45 {
+		font-size: 45px;
+	}
+	&-50 {
+		font-size: 50px;
+		@media #{$xs} {
+			font-size: 45px;
+		}
+	}
+	&-55 {
+		font-size: 55px;
+	}
+	&-60 {
+		font-size: 60px;
+	}
+	&-80 {
+		font-size: 80px;
+        @media #{$lg} {
+            font-size: 60px;
+        }
+        @media #{$md} {
+            font-size: 50px;
+        }
+        @media #{$xs} {
+            font-size: 45px;
+			line-height: 1.2;
+        }
+	}
+}
